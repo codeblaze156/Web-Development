@@ -6,6 +6,7 @@
 
 body{
     background-color: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 #testimonial-grid-container{
@@ -15,6 +16,8 @@ body{
 #testimonial-1{
     background-color: hsl(263, 55%, 52%);
     color: #ffffff;
+    position: relative;
+    z-index: 0;
 }
 
 #testimonial-2{
@@ -22,8 +25,9 @@ body{
     color: #ffffff;
 }
 
-#testimonial-3{
+#testimonial-3, testimonial-5{
     background-color: hsl(0, 0%, 100%);
+    color: #48556a;
 }
 
 #testimonial-4{
@@ -32,15 +36,53 @@ body{
 
 }
 
-#testimonial-5{
-    background-color: hsl(0, 0%, 100%);
-}
-
 .grid-item{
     margin-bottom: 20px;
     padding: 20px;
-    /* border-radius: 15px */
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
+    font-size: 13px;
+
 }
+
+.header{
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+    z-index: 3;
+}
+
+.header .name{
+    opacity: 100%;
+    font-size: 1rem;
+}
+
+.header img{
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid;
+    border-color: purple;
+}
+
+.grid-item h4{
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.grid-item p{
+    opacity: 60%;
+}
+
+#quote{
+    position: absolute;
+    right: 15%;
+    top: 0;
+    z-index: 1;
+}
+
+
+
 
 
 /*mobile */
@@ -51,10 +93,22 @@ body{
     #testimonial-grid-container, #main-left, #top, #bottom{
         display: flex
     }
+
+    #top, #bottom{
+        flex-basis: 50%;
+    }
+    
+    #testimonial-1,   #testimonial-4{
+        flex-basis: 65%;
+    }
+    
+    #testimonial-2,   #testimonial-3{
+        flex-basis: 35%;
+        }  
    
     #testimonial-grid-container{
     display:flex;
-    max-width: 900px;
+    max-width: 1440px;
     margin: 0 auto;
 
    }
@@ -83,4 +137,7 @@ body{
     #testimonial-2,   #testimonial-3{
     flex-basis: 35%;
     }  
+
+    /* changing font, picture and text layout */
+
 
